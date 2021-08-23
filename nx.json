@@ -1,0 +1,49 @@
+{
+  "npmScope": "frontend",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "projects": {
+    "admin": {
+      "tags": []
+    },
+    "admin-e2e": {
+      "tags": [],
+      "implicitDependencies": ["admin"]
+    },
+    "e-shop": {
+      "tags": []
+    },
+    "e-shop-e2e": {
+      "tags": [],
+      "implicitDependencies": ["e-shop"]
+    },
+    "orders": {
+      "tags": []
+    },
+    "products": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
+    },
+    "users": {
+      "tags": []
+    }
+  }
+}

@@ -1,0 +1,14 @@
+
+<div class="product-item" >
+  <div class="product-item-wrapper" >
+    <img [src]="product.image" class="image" [routerLink]="'/products/' + product.id" alt="" />
+    <h4 class="name p-text-center">{{ product.name }}</h4>
+    <h5 class="price">{{ 100 | currency }}</h5>
+    <p-button
+      styleClass="p-mt-3 add-to-cart"
+      label="Add to cart"
+      icon="pi pi-shopping-cart"
+      (onClick)="addToCart()"
+    ></p-button>
+  </div>
+</div>
